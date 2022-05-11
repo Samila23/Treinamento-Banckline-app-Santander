@@ -14,7 +14,10 @@ import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt'
 
+import { CurrencyMaskModule } from "ng2-currency-mask";
+
 registerLocaleData(localePt);
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +30,7 @@ registerLocaleData(localePt);
     NgbModule,
     FormsModule,
     HttpClientModule,
+    CurrencyMaskModule
   ],
   providers: [{provide: LOCALE_ID , useValue: 'pt-br'}],
   bootstrap: [AppComponent]
